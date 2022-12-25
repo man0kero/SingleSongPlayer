@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/city"
+    tools:context=".MainActivity">
+
+
+    <SeekBar
+        android:id="@+id/volumeSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/note"
+        android:layout_marginTop="200dp"/>
+
+    <ImageView
+        android:id="@+id/note"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:background="@drawable/circle_note"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/music_note" />
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="81dp"
+        android:layout_height="79dp"
+        android:background="@drawable/circle_play"
+        app:srcCompat="@drawable/pause"
+        android:layout_below="@id/volumeSeekBar"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="81dp"
+        android:layout_height="79dp"
+        android:background="@drawable/circle_play"
+        android:layout_below="@id/volumeSeekBar"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="play"
+        app:srcCompat="@drawable/play_arrow" />
+
+    <ImageView
+        android:id="@+id/skip"
+        android:layout_width="64dp"
+        android:layout_height="62dp"
+        android:background="@drawable/circle_play"
+        android:onClick="next"
+        android:layout_toRightOf="@id/play"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/volumeSeekBar"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/skip_next" />
+
+    <ImageView
+        android:id="@+id/previous"
+        android:layout_width="64dp"
+        android:layout_height="62dp"
+        android:background="@drawable/circle_play"
+        android:onClick="previous"
+        android:layout_toLeftOf="@id/play"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/volumeSeekBar"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/skip_previous" />
+
+
+</RelativeLayout>
